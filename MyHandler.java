@@ -22,7 +22,9 @@ public class MyHandler implements HttpHandler {
         headers.set("Connection", "close");
 
         // Send response body.
-        String response = "This is the response";
+        String response = String response = "{\"name\":\"Japan\",\"gold\":27,\"silver\":14,\"bronze\":17,\"
+total\":58}";
+;
         System.out.println(response);
         he.sendResponseHeaders(200, response.length());
         OutputStream os = he.getResponseBody();
