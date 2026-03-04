@@ -15,14 +15,12 @@
   </body>
   <script>
   function fillName() {
-    const country = document.getElementById('name').value;
+    const name = document.getElementById('name').value;
     console.log("fillName called");
-    fetch('http://localhost:8000/test?code=' + country)
+    fetch('http://localhost:8000/hello/' + name)
       .then(response => response.json()) // or .json() if applicable
       .then(data => {
-        document.getElementById('gold').value   = data.tally[0];
-        document.getElementById('silver').value = data.tally[1];
-        document.getElementById('bronze').value = data.tally[2];
+        
      })
      .catch(error => console.error('Error:', error));
   }
